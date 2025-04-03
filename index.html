@@ -1,70 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="overflow-x: hidden;">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Arpit Agarwala | Portfolio</title>
   <link rel="stylesheet" href="css/style.css" />
+  <!-- Kings Font for headings -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kings&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Orbitron:wght@500&display=swap" rel="stylesheet">
-</head>
-<body>
-  <header>
-    <section class="photo-section">
-      <h1 class="spotlight-text">
-        <div class="hover-zone">
-          <span class="glow-text">Arpit Agarwala</span>
-        </div>
-      </h1>   
-      <p>Tech Enthusiast | Visionary Creator</p>
-    </section>
-  </header>
+  <style>
 
-  <nav>
+  </style>
+</head>
+<div class="nav-toggle" id="navToggle" onclick="toggleMenu()">
+  <span class="bar top"></span>
+  <span class="bar middle"></span>
+  <span class="bar bottom"></span>
+</div>
+
+  <div class="menu-overlay" id="menuOverlay">
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
-  </nav>
+  </div>
 
-  <section class="time-slide" id="time-section">
-    <div class="time-center">
-      <h1 id="ist-clock">00:00:00</h1>
-      <p class="time-quote">“Time is money. And I’m already invested.”</p>
-    </div>
-  </section>
+  <div class="scroll-container">
+    <header style="padding: 0;">
+      <section class="photo-section" style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100vw; height: 100vh; margin: auto;">
+        <h1 class="spotlight-text">
+          <div class="hover-zone">
+            <span class="glow-text">Arpit Agarwala</span>
+          </div>
+        </h1>   
+        <p>Tech Enthusiast | Visionary Creator</p>
+      </section>
+    </header>
 
-  <section id="about" class="reveal">
-    <h2>About Me</h2>
-    <p>Driven by curiosity and powered by passion, I'm a self-taught tech explorer on a mission to build, innovate, and inspire.</p>
-  </section>
+    <section class="time-slide" id="time-section">
+      <div class="time-center">
+        <h1 id="ist-clock">00:00:00</h1>
+        <p class="time-quote">“Time is money. And I’m already invested.”</p>
+      </div>
+    </section>
 
-  <section id="skills" class="reveal">
-    <h2>Skills</h2>
-    <p>Creative Tools: Figma, Photoshop, Canva<br>
-       Tech Stack: HTML, CSS, JavaScript, Unity<br>
-       Productivity: Excel, Notion, Word</p>
-  </section>
+    <section id="about" class="about-container">
+      <h2 class="about-heading">About Me</h2>
+      <div class="about-columns">
+        <div class="about-column">
+          <p>Hello there! I'm <strong>Arpit Agarwala</strong>, a BCom (Hons) student and aspiring Chartered Accountant (CA) who's passionate about building the future of finance with the power of technology.</p>
+          <p>Born in Rajasthan, raised in Assam, and currently thriving in Kolkata — I recently cleared the <strong>CA Foundation exam (Dec 2023)</strong> and am now preparing for the CA Intermediate exam with full focus and fire.</p>
+          <p>Beyond numbers, I love to share knowledge. As a tech enthusiast and former president of my school's IT club, I’ve led workshops, mentored learners, and inspired many to embrace digital skills.</p>
+        </div>
+        <div class="about-column">
+          <p>From advanced Excel work to photo/video editing, website design, and front-end development, I bring versatility to the table. What makes me different? I blend tech with human touch — understanding people, communicating ideas clearly, and building lasting relationships.</p>
+          <p>Whether you're into <em>finance, tech, entrepreneurship</em> or just want to collaborate — let’s connect and create something meaningful together.</p>
+          <p><strong>Let’s grow. Let’s build. Let’s connect.</strong></p>
+        </div>
+      </div>
+    </section>
+    
+    
+    
 
-  <section id="projects" class="reveal">
-    <h2>Featured Projects</h2>
-    <p>[Project Showcases with future hover animations]</p>
-  </section>
+    <section id="skills">
+      <h2 class="section-heading">Skills</h2>
+      <p>Creative Tools: Figma, Photoshop, Canva<br>
+         Tech Stack: HTML, CSS, JavaScript, Unity<br>
+         Productivity: Excel, Notion, Word</p>
+    </section>
 
-  <section id="contact" class="reveal">
-    <h2>Contact</h2>
-    <p>Let's build something amazing together.</p>
-    <button onclick="window.location.href='mailto:arpit.agarwala@example.com'">Contact Me</button>
-    <div class="social">
-      <a href="https://linkedin.com/in/yourlinkedin" target="_blank">LinkedIn</a>
-      <a href="https://instagram.com/yourinstagram" target="_blank">Instagram</a>
-      <a href="https://github.com/yourgithub" target="_blank">GitHub</a>
-    </div>
-  </section>
+    <section id="projects">
+      <h2 class="section-heading">Projects</h2>
+      <p>[Project Showcases with future hover animations]</p>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 Arpit Agarwala. All rights reserved.</p>
-  </footer>
+    <section id="contact">
+      <h2 class="section-heading">Contact</h2>
+      <p>Let's build something amazing together.</p>
+      <button onclick="window.location.href='mailto:arpit.agarwala@example.com'">Contact Me</button>
+      <div class="social">
+        <a href="https://linkedin.com/in/yourlinkedin" target="_blank">LinkedIn</a>
+        <a href="https://instagram.com/yourinstagram" target="_blank">Instagram</a>
+        <a href="https://github.com/yourgithub" target="_blank">GitHub</a>
+      </div>
+    </section>
 
+    <footer>
+      <p>&copy; 2025 Arpit Agarwala. All rights reserved.</p>
+    </footer>
+  </div>
   <script src="js/script.js"></script>
 </body>
 </html>
