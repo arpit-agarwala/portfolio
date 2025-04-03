@@ -133,7 +133,7 @@ footer {
 .photo-section {
   width: 95.5vw;
   height: 90vh;
-  background: url('/Images/me.jpg') center/cover no-repeat;
+  background: url('../Images/me.jpg') center/cover no-repeat;
   background-blend-mode: multiply;
   background-color: rgba(17, 17, 17, 0.9);
   color: white;
