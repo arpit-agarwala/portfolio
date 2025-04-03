@@ -14,6 +14,9 @@ html, body {
   background: #000;
   color: #fff;
   font-family: 'Unbounded', sans-serif;
+  scrollbar-width: none;       /* Firefox */
+  -ms-overflow-style: none;    /* IE and Edge */
+  overflow: hidden;
 }
 
 html, body, button, a, input, textarea {
@@ -98,6 +101,16 @@ button:hover ~ .custom-cursor,
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
+  overflow-y: scroll;
+  scrollbar-width: none;       /* Firefox */
+  -ms-overflow-style: none;    /* IE and Edge */
+}
+
+
+/* For WebKit (Chrome, Safari, etc.) */
+.scroll-container::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
 }
 
 .scroll-container section {
