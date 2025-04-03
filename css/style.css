@@ -16,6 +16,32 @@ html, body {
   font-family: 'Unbounded', sans-serif;
 }
 
+html, body, button, a, input, textarea {
+  cursor: none !important;
+}
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background-color: #00ffe7;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.15s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Enlarged effect on hoverable elements */
+a:hover ~ .custom-cursor,
+button:hover ~ .custom-cursor,
+.menu-overlay a:hover ~ .custom-cursor {
+  transform: translate(-50%, -50%) scale(1.8);
+  background-color: white;
+  box-shadow: 0 0 15px #00ffe7;
+}
 /* ------------------------------ */
 /* Scroll Container               */
 /* ------------------------------ */
@@ -133,7 +159,7 @@ footer {
 .photo-section {
   width: 95.5vw;
   height: 90vh;
-  background: url('../Images/me.jpg') center/cover no-repeat;
+  background: url('/Images/me.jpg') center/cover no-repeat;
   background-blend-mode: multiply;
   background-color: rgba(17, 17, 17, 0.9);
   color: white;
@@ -160,6 +186,96 @@ footer {
   width: 100vw;
   height: 100vh;
 }
+
+/* ------------------------------ */
+/* Contact Section                */
+/* ------------------------------ */
+/* ------------------------------ */
+/* Contact Section Styles         */
+/* ------------------------------ */
+.contact-section {
+  padding: 4rem 2rem;
+  width: 100vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+}
+
+.contact-section p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  color: #aaa;
+}
+
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #111;
+  color: #fff;
+  border: 1px solid #333;
+  resize: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #00ffe7;
+  box-shadow: 0 0 8px rgba(0, 255, 231, 0.4);
+}
+
+.contact-form button {
+  background-color: #00ffe7;
+  color: #000;
+  font-weight: bold;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #00e6d2;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2.5rem;
+}
+
+.social-links a {
+  color: #e5e5e5;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #00ffe7;
+  text-shadow: 0 0 10px #00ffe7;
+}
+
+
 
 .section-heading {
   font-family: 'Kings', cursive;
@@ -352,3 +468,44 @@ footer {
 .nav-toggle.active .bottom {
   transform: rotate(-45deg) translate(5px, -5px);
 }
+
+#achievements {
+  padding: 4rem 2rem;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  scroll-snap-align: start;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+}
+
+.card {
+  background: #111;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 300px;
+  text-align: left;
+  box-shadow: 0 0 15px rgba(0, 255, 231, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(0, 255, 231, 0.3);
+}
+
+.card .quote {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #00ffe7;
+}
+
+

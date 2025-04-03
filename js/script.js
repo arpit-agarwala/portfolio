@@ -24,6 +24,17 @@ if (glowText && hoverZone) {
   });
 }
 
+// Close menu when a menu link is clicked
+document.querySelectorAll('.menu-overlay a').forEach(link => {
+  link.addEventListener('click', () => {
+    const overlay = document.getElementById('menuOverlay');
+    const toggle = document.getElementById('navToggle');
+    overlay.classList.remove('active');
+    toggle.classList.remove('active');
+  });
+});
+
+
 // IST Clock
 function updateISTClock() {
   const clock = document.getElementById("ist-clock");
@@ -49,3 +60,11 @@ function toggleMenu() {
   overlay.classList.toggle('active');
   toggle.classList.toggle('active');
 }
+
+
+const cursor = document.getElementById("customCursor");
+
+document.addEventListener("mousemove", (e) => {
+  cursor.style.top = `${e.clientY}px`;
+  cursor.style.left = `${e.clientX}px`;
+});
