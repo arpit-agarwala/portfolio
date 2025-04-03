@@ -154,7 +154,7 @@ footer {
 
 /* Hero background styling */
 .photo-section {
-  background: url('https://github.com/arpit-agarwala/portfolio/blob/main/Images/me.jpg') center/cover no-repeat;
+  background: url('../Images/me.jpg') center/cover no-repeat;
   background-blend-mode: multiply;
   background-color: rgba(17, 17, 17, 0.9);
   color: white;
