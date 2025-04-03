@@ -1,18 +1,3 @@
-// Reveal animation on scroll
-const reveals = document.querySelectorAll(".reveal");
-
-window.addEventListener("scroll", () => {
-  for (let i = 0; i < reveals.length; i++) {
-    const windowHeight = window.innerHeight;
-    const elementTop = reveals[i].getBoundingClientRect().top;
-    const elementVisible = 100;
-
-    if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
-    }
-  }
-});
-
 // Hover spotlight effect on name
 const glowText = document.querySelector(".glow-text");
 const hoverZone = document.querySelector(".hover-zone");
@@ -39,7 +24,7 @@ if (glowText && hoverZone) {
   });
 }
 
-// Live IST Clock
+// IST Clock
 function updateISTClock() {
   const clock = document.getElementById("ist-clock");
   if (!clock) return;
@@ -54,6 +39,13 @@ function updateISTClock() {
 
   clock.textContent = `${hours}:${minutes}:${seconds}`;
 }
-
 setInterval(updateISTClock, 1000);
 updateISTClock();
+
+// Toggle hamburger menu
+function toggleMenu() {
+  const overlay = document.getElementById('menuOverlay');
+  const toggle = document.getElementById('navToggle');
+  overlay.classList.toggle('active');
+  toggle.classList.toggle('active');
+}
