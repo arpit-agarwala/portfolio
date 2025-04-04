@@ -196,7 +196,7 @@ footer {
   z-index: -1;
   color: transparent;
   -webkit-text-stroke: 2.5px;
-  background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), #00ffe7, #0099ff, transparent 40%);
+  background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), #00ffe7, #5bf3e4, transparent 40%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

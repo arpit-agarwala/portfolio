@@ -1,0 +1,126 @@
+
+/* ------------------------------ */
+/* Finance Lab Styles             */
+/* ------------------------------ */
+body {
+  background: #000;
+  color: #fff;
+  font-family: 'Unbounded', sans-serif;
+  margin: 0;
+  padding: 2rem;
+}
+
+.lab-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #111;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 255, 231, 0.1);
+}
+
+.back-link {
+  display: inline-block;
+  color: #00ffe7;
+  margin-bottom: 1rem;
+  text-decoration: none;
+}
+
+.lab-heading {
+  font-size: 2.5rem;
+  color: #00ffe7;
+  margin-bottom: 1rem;
+}
+
+.lab-intro {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 2rem;
+}
+
+.tax-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tax-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  color: #eee;
+}
+
+.tax-form input,
+.tax-form select {
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #222;
+  color: #fff;
+  margin-top: 0.5rem;
+}
+
+.tax-form input:focus,
+.tax-form select:focus {
+  outline: none;
+  border-color: #00ffe7;
+  box-shadow: 0 0 10px rgba(0, 255, 231, 0.3);
+}
+
+.checkboxes label {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+.tax-form button {
+  background-color: #00ffe7;
+  color: #000;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.tax-form button:hover {
+  background-color: #00e6d2;
+}
+
+.result {
+  background: #1a1a1a;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 255, 231, 0.2);
+}
+
+.result h2 {
+  color: #00ffe7;
+  margin-bottom: 1rem;
+}
+
+.result p {
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+.back-to-games {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #00ffe7;
+  font-size: 1rem;
+  text-decoration: none;
+  background: rgba(0, 255, 231, 0.05);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #00ffe7;
+  transition: background 0.3s ease;
+}
+
+.back-to-games:hover {
+  background: rgba(0, 255, 231, 0.15);
+}

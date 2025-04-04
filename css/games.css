@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    color: #fff;
+    font-family: 'Unbounded', sans-serif;
+    overflow-x: hidden;
+  }
+  
+  .games-container {
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .games-heading {
+    font-size: 3rem;
+    color: #00ffe7;
+    margin-bottom: 1rem;
+  }
+  
+  .games-subtext {
+    color: #bbb;
+    margin-bottom: 3rem;
+    font-size: 1.2rem;
+  }
+  
+  .games-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .game-card {
+    background: #111;
+    border-radius: 12px;
+    padding: 2rem;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #00ffe7;
+    position: relative;
+  }
+  
+  .game-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(0, 255, 231, 0.3);
+  }
+  
+  .game-card h2 {
+    color: #00ffe7;
+    margin-bottom: 0.5rem;
+  }
+  
+  .game-card p {
+    color: #ccc;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .play-btn {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    background: #00ffe7;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+  }
+  
+  .play-btn:hover {
+    background: #00e6d2;
+  }
+  
+  /* Coming Soon Overlay */
+  .coming-soon {
+    opacity: 0.6;
+    position: relative;
+  }
+  
+  .coming-label {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.9rem;
+    color: #aaa;
+    background: #222;
+    padding: 0.3rem 1rem;
+    border-radius: 6px;
+    border: 1px dashed #888;
+  }
+  
+  .centered-nav {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding: 2rem 0;
+    background: transparent;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: 'Unbounded', sans-serif;
+  }
+  
+  .centered-nav a {
+    text-decoration: none;
+    color: #e5e5e5;
+    transition: all 0.3s ease;
+    position: relative;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+
+  }
+  
+  .centered-nav a:hover {
+    color: #00ffe7;
+    text-shadow: 0 0 8px #00ffe7;
+  }
+  
+  .centered-nav a.active {
+    color: #00ffe7;
+    text-shadow: 0 0 8px #00ffe7, 0 0 12px #00ffe7;
+    font-weight: 700;
+  }
+  

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Finance Lab | Tax Saving Challenge</title>
+  <link rel="stylesheet" href="../css/tax-challenge.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="lab-container">
+    <a href="games.html" class="back-to-games">← Back to Games</a>
+    <h1 class="lab-heading">💡 Tax Saving Challenge</h1>
+    <p class="lab-intro">Try to save the most tax by choosing the best deductions. Ready?</p>
+
+    <form class="tax-form" id="taxForm">
+      <label>Age:
+        <select name="age" required>
+          <option value="">Select</option>
+          <option value="below60">Below 60</option>
+          <option value="above60">Above 60</option>
+        </select>
+      </label>
+
+      <label>Total Annual Income:
+        <input type="number" name="income" required placeholder="e.g. 800000" />
+      </label>
+
+      <label>Choose your deductions (tick all that apply):</label>
+      <div class="checkboxes">
+        <label><input type="checkbox" name="deductions" value="150000" /> Section 80C (ELSS/PPF/etc.)</label>
+        <label><input type="checkbox" name="deductions" value="25000" /> Section 80D (Health Insurance)</label>
+        <label><input type="checkbox" name="deductions" value="50000" /> NPS (Pension Scheme)</label>
+        <label><input type="checkbox" name="deductions" value="60000" /> HRA (House Rent)</label>
+      </div>
+
+      <button type="submit">Calculate Tax Saved</button>
+    </form>
+
+    <div class="result" id="resultBox" style="display: none;">
+      <h2>🎉 Results</h2>
+      <p id="taxSavedText"></p>
+      <p id="badgeText"></p>
+    </div>
+  </div>
+
+  <script src="../js/tax-challenge.js"></script>
+</body>
+</html>
