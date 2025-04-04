@@ -68,3 +68,48 @@ document.addEventListener("mousemove", (e) => {
   cursor.style.top = `${e.clientY}px`;
   cursor.style.left = `${e.clientX}px`;
 });
+
+const fullNav = document.getElementById('fullNav');
+const navToggle = document.getElementById('navToggle');
+const menuOverlay = document.getElementById('menuOverlay');
+const navLinks = document.querySelectorAll('.menu-overlay a');
+
+// Hide/Show nav based on home section visibility
+const homeSection = document.getElementById('home');
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // User is on the home section
+        fullNav.classList.remove('hidden');
+        navToggle.classList.add('hidden');
+      } else {
+        // User scrolled past home
+        fullNav.classList.add('hidden');
+        navToggle.classList.remove('hidden');
+        menuOverlay.classList.remove('active');
+        navToggle.classList.remove('active');
+      }
+    });
+  },
+  {
+    threshold: 0.5, // 50% of the home section must be visible
+  }
+);
+
+observer.observe(homeSection);
+
+// Toggle Menu
+function toggleMenu() {
+  menuOverlay.classList.toggle('active');
+  navToggle.classList.toggle('active');
+}
+
+// Close menu when clicking any nav link
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    menuOverlay.classList.remove('active');
+    navToggle.classList.remove('active');
+  });
+});

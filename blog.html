@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arpit's Blog | Finance & Tech</title>
+  <link rel="stylesheet" href="css/blog.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="blog-nav">
+        <div class="nav-center">
+          <a href="index.html">Home</a>
+          <a href="blog.html" class="active">Blog</a>
+        </div>
+      </nav>
+      
+      
+  <header>
+    <h1>Arpit's Blog</h1>
+    <p>Insights at the crossroads of finance, tech, and entrepreneurship.</p>
+    <input type="text" id="blogSearch" placeholder="Search blog posts..." />
+  </header>
+
+  <main id="blogContainer">
+    <!-- Blog Cards -->
+    <div class="blog-card">
+      <h2><a href="blogs/tax-saving-strategies.html">Top Tax Saving Strategies for Young Professionals</a></h2>
+      <p>Explore how to effectively reduce your tax liability with smart investments and deductions. A must-read for salaried and freelance workers.</p>
+    </div>
+
+    <div class="blog-card">
+      <h2><a href="blogs/ai-in-finance.html">AI in Finance: Automation, Analytics & Alpha</a></h2>
+      <p>Discover how artificial intelligence is reshaping financial services, from robo-advisors to fraud detection and algorithmic trading.</p>
+    </div>
+
+    <div class="blog-card">
+      <h2><a href="blogs/financial-habits.html">Financial Habits That Made Me Smarter with Money</a></h2>
+      <p>From daily tracking to monthly reviews — here’s how I cultivated smart money habits that helped me scale my personal wealth.</p>
+    </div>
+
+    <div class="blog-card">
+      <h2><a href="blogs/tax-loss-harvesting.html">What is Tax-Loss Harvesting & Why It Matters</a></h2>
+      <p>Tax-loss harvesting is a strategy to reduce tax liabilities on capital gains. Here’s a beginner-friendly breakdown.</p>
+    </div>
+
+    <div class="blog-card">
+      <h2><a href="blogs/startup-valuation.html">How to Value Your Startup: A Guide for First-Time Founders</a></h2>
+      <p>Learn about common methods to value early-stage startups and what investors look for before cutting a cheque.</p>
+    </div>
+  </main>
+
+  <div class="pagination">
+    <a href="#" class="active">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+  </div>
+
+  <script>
+    // Search Function
+    document.getElementById('blogSearch')?.addEventListener('input', function (e) {
+      const query = e.target.value.toLowerCase();
+      document.querySelectorAll('.blog-card').forEach(card => {
+        const text = card.innerText.toLowerCase();
+        card.style.display = text.includes(query) ? 'block' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>

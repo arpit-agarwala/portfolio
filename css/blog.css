@@ -1,0 +1,119 @@
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Unbounded', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: #111;
+    border-bottom: 1px solid #333;
+  }
+  
+  header h1 {
+    font-size: 3rem;
+    color: #00ffe7;
+    margin-bottom: 0.5rem;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    color: #aaa;
+  }
+
+.blog-nav {
+  background: #000;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #222;
+}
+
+.blog-nav .nav-center {
+  display: flex;
+  gap: 2rem;
+}
+
+.blog-nav a {
+  color: #e5e5e5;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.blog-nav a:hover,
+.blog-nav a.active {
+  color: #00ffe7;
+  text-shadow: 0 0 5px #00ffe7;
+}
+
+  
+  #blogSearch {
+    margin-top: 2rem;
+    padding: 0.8rem 1rem;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 6px;
+    border: none;
+    font-size: 1rem;
+    background-color: #222;
+    color: #fff;
+    border: 1px solid #333;
+  }
+  
+  main {
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  .blog-card {
+    background-color: #111;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 231, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 255, 231, 0.25);
+  }
+  
+  .blog-card h2 a {
+    color: #00ffe7;
+    text-decoration: none;
+    font-size: 1.6rem;
+  }
+  
+  .blog-card p {
+    margin-top: 0.8rem;
+    font-size: 1rem;
+    color: #ccc;
+  }
+  
+  .pagination {
+    text-align: center;
+    padding: 2rem 0;
+  }
+  
+  .pagination a {
+    color: #00ffe7;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .pagination a.active {
+    border-bottom: 2px solid #00ffe7;
+  }
+  

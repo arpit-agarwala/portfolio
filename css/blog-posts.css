@@ -1,0 +1,161 @@
+/* ------------------------------ */
+/* Reset & Global Styles         */
+/* ------------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    font-family: 'Unbounded', sans-serif;
+    background-color: #000;
+    color: #fff;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+  
+  /* ------------------------------ */
+  /* Blog Container with Glow      */
+  /* ------------------------------ */
+  .container {
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background-color: #0e0e0e;
+    border-radius: 16px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  /* Thin animated glowing border */
+  .container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 16px;
+    padding: 2px;
+    background: linear-gradient(135deg, #00ffe7, #0099ff, #00ffe7); /* matching brand */
+    background-size: 400% 400%;
+    animation: borderGlow 8s linear infinite;
+    mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    -webkit-mask-composite: destination-out;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  
+/* Glowing border animation */
+@keyframes borderGlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* ------------------------------ */
+  /* Back Link                     */
+  /* ------------------------------ */
+  .back-link {
+    display: inline-block;
+    color: #00ffe7;
+    text-decoration: none;
+    margin-bottom: 2.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .back-link:hover {
+    text-shadow: 0 0 10px #00ffe7;
+  }
+  
+  /* ------------------------------ */
+  /* Blog Title & Meta             */
+  /* ------------------------------ */
+  .container h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #00ffe7;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+  
+  .date,
+  .reading-time {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #999;
+    margin-bottom: 0.5rem;
+  }
+  
+  .meta {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* ------------------------------ */
+  /* Content Styling               */
+  /* ------------------------------ */
+  .content p {
+    font-size: 1.1rem;
+    line-height: 1.85;
+    color: #ddd;
+    margin-bottom: 1.8rem;
+    text-align: justify;
+  }
+  
+  .content h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #00ffe7;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .content ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .content ul li {
+    line-height: 1.7;
+    margin-bottom: 0.7rem;
+    color: #ccc;
+  }
+  
+  /* ------------------------------ */
+  /* Responsive Design             */
+  /* ------------------------------ */
+  @media (max-width: 768px) {
+    .container {
+      margin: 2rem 1rem;
+      padding: 1.5rem;
+    }
+  
+    .container h1 {
+      font-size: 2.1rem;
+    }
+  
+    .content p {
+      font-size: 1rem;
+    }
+  
+    .content h2 {
+      font-size: 1.3rem;
+    }
+  
+    .meta {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
