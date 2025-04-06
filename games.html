@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Finance Games | Arpit Agarwala</title>
+  <link rel="stylesheet" href="../css/games.css">
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Centered Navigation for Games Page -->
+<nav class="centered-nav">
+  <a href="index.html">Home</a>
+  <a href="blog.html">Blogs</a>
+  <a href="games.html" class="active">Games</a>
+  <a href="projects.html">Projects</a>
+</nav>
+
+  
+  <div class="games-container">
+    <h1 class="games-heading">🎮 Finance Lab – Play & Learn</h1>
+    <p class="games-subtext">Explore fun and interactive finance games built by Arpit Agarwala.</p>
+
+    <div class="games-grid">
+
+      <!-- Game Card 1 -->
+      <div class="game-card">
+        <h2>💸 Tax Saving Challenge</h2>
+        <p>Make smart choices to save maximum income tax using legal methods.</p>
+        <a href="tax-challenge.html" class="play-btn">Play Now</a>
+      </div>
+
+      <!-- Future Game Example -->
+      <div class="game-card coming-soon">
+        <h2>📈 Investment Simulator</h2>
+        <p>Simulate SIPs, lumpsums, and stocks. Grow your virtual wealth. (Coming Soon)</p>
+        <span class="coming-label">Coming Soon</span>
+      </div>
+
+      <div class="game-card coming-soon">
+        <h2>🧠 Budgeting Puzzle</h2>
+        <p>Balance your lifestyle with limited income in this fun scenario game.</p>
+        <span class="coming-label">Coming Soon</span>
+      </div>
+
+    </div>
+  </div>
+  <script>
+    function toggleMenu() {
+      const overlay = document.getElementById('menuOverlay');
+      const toggle = document.getElementById('navToggle');
+      overlay.classList.toggle('active');
+      toggle.classList.toggle('active');
+    }
+  </script>
+  
+</body>
+</html>

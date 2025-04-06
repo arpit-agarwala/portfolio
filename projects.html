@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Projects</title>
+  <link rel="stylesheet" href="css/projects.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="centered-nav">
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blogs</a>
+    <a href="games.html">Games</a>
+    <a href="projects.html" class="active">Projects</a>
+  </nav>
+
+  <section class="projects-section">
+    <h1 class="page-title">Projects</h1>
+
+    <div class="tabs">
+      <button class="tab-button active" onclick="filterProjects('all')">All</button>
+      <button class="tab-button" onclick="filterProjects('web')">Web</button>
+      <button class="tab-button" onclick="filterProjects('game')">Games</button>
+      <button class="tab-button" onclick="filterProjects('finance')">Finance Tools</button>
+    </div>
+
+    <div class="projects-grid">
+      <div class="project-card web active" onclick="openModal('bluecave')">
+        <h2>Bluecave App</h2>
+        <p>Apartment community management with announcements, security & amenities.</p>
+      </div>
+
+      <div class="project-card game active" onclick="openModal('taxgame')">
+        <h2>Tax Saving Game</h2>
+        <p>Gamified learning on tax-saving strategies. Interactive and fun!</p>
+      </div>
+
+      <div class="project-card finance active" onclick="openModal('loanCalc')">
+        <h2>Loan Calculator</h2>
+        <p>Simple EMI calculator built for finance enthusiasts and students.</p>
+      </div>
+
+      <div class="project-card finance active" onclick="window.location.href='timer-app.html'">
+        <h2>Timer App</h2>
+        <p>Productivity-focused Pomodoro-style timer with focus & break modes.</p>
+      </div>
+      
+    </div>
+  </section>
+
+  <div id="projectModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="js/projects.js"></script>
+</body>
+</html>

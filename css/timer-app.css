@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #000;
+    color: #fff;
+    font-family: 'Unbounded', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  .centered-nav {
+    text-align: center;
+    padding: 1rem 0;
+  }
+  
+  .centered-nav a {
+    margin: 0 1rem;
+    color: #00ffe7;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+  }
+  
+  .centered-nav a.active::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 50%;
+    height: 2px;
+    background: #00ffe7;
+    transform: translateX(-50%);
+  }
+  
+  .timer-container {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: #00ffe7;
+    margin-bottom: 2rem;
+  }
+  
+  .tab-buttons {
+    margin-bottom: 2rem;
+  }
+  
+  .tab-button {
+    padding: 10px 20px;
+    background: transparent;
+    border: 2px solid #00ffe7;
+    color: #00ffe7;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin: 0 0.5rem;
+  }
+  
+  .tab-button:hover {
+    background-color: rgba(0, 255, 231, 0.1);
+  }
+  
+  .tab-button.active {
+    background-color: #00ffe7;
+    color: #000;
+    pointer-events: none;
+  }
+  
+  .tab-content {
+    display: none;
+  }
+  
+  .tab-content.active {
+    display: block;
+  }
+  
+  .clock-mode-toggle {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 1rem;
+  }
+  
+  .clock-display {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: #00ffe7;
+    text-shadow: 0 0 10px rgba(0, 255, 231, 0.5);
+  }
+  
+  .analog-clock {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    border: 5px solid #00ffe7;
+    border-radius: 50%;
+    display: none;
+    background: #000;
+  }
+  
+  .hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom center;
+    background-color: #00ffe7;
+    transform: rotate(0deg);
+    border-radius: 2px;
+  }
+  
+  .hand.hour {
+    width: 4px;
+    height: 50px;
+  }
+  
+  .hand.minute {
+    width: 3px;
+    height: 70px;
+  }
+  
+  .hand.second {
+    width: 2px;
+    height: 90px;
+    background-color: #ff0066;
+  }
+  
+  .center-dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #00ffe7;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+  
+  
+  .timer-display {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #00ffe7;
+  }
+  
+  .timer-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .timer-inputs input {
+    width: 60px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    text-align: center;
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 5px;
+    color: #fff;
+  }
+  
+  .timer-buttons button {
+    padding: 0.6rem 1.2rem;
+    margin: 0 0.5rem;
+    font-weight: bold;
+    border: none;
+    background: #00ffe7;
+    color: #000;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .timer-buttons button:hover {
+    background: #00ddcc;
+  }
+  
+  .fullscreen-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: #00ffe7;
+    cursor: pointer;
+    z-index: 999;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+  }
+  
+  .fullscreen-toggle:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+  
+  /* Hide UI in fullscreen */
+.fullscreen-mode #mainNav,
+.fullscreen-mode .tab-button,
+.fullscreen-mode .tab-content:not(#clockWrapper) {
+  display: none !important;
+}
+
+/* Center align clock */
+.fullscreen-mode #clockWrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10000;
+}
+
+/* Optional: increase clock size in fullscreen */
+.fullscreen-mode .clock-display {
+  font-size: 6rem;
+}
+.fullscreen-mode .analog-clock {
+  transform: scale(1.5);
+}
+
+/* Ensure clock toggle and display are grouped together */
+.clock-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+  }
+  
+  /* In fullscreen mode, center everything cleanly */
+  .fullscreen-mode {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .fullscreen-mode .fullscreen-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+/* Make sure clock title has spacing above clock */
+.clock-title-group {
+    margin-bottom: 2rem;
+    z-index: 5;
+  }
+  
+  /* .clock-title {
+    transition: opacity 0.3s ease;
+  } */
+  
+  .fullscreen-mode .clock-title {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  
+  
+  .fullscreen-mode .clock-title {
+    font-size: 3rem;
+  }
+  
+  /* Fix spacing in clock group for layout stacking */
+  .clock-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  

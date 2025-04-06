@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Timer App</title>
+  <link rel="stylesheet" href="css/timer-app.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav id="mainNav" class="centered-nav">
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blogs</a>
+    <a href="games.html">Games</a>
+    <a href="projects.html">Projects</a>
+  </nav>
+
+  <!-- Main App Container -->
+  <main class="timer-container">
+
+    <main class="timer-container">
+        <!-- Move title outside the clock group -->
+        <h1 class="clock-title">Time Master</h1>
+      
+        <!-- Tab Buttons -->
+        <div class="tab-buttons">
+          <button class="tab-button active" onclick="switchTab('clock', this)">Clock</button>
+          <button class="tab-button" onclick="switchTab('timer', this)">Timer</button>
+        </div>
+      
+        <!-- CLOCK TAB -->
+        <div id="clockWrapper" class="tab-content active">
+          <div class="fullscreen-toggle" onclick="toggleFullScreen()" title="Fullscreen Clock">⛶</div>
+      
+          <div class="clock-container">
+            <div class="clock-mode-toggle">
+              <label><input type="radio" name="clockMode" value="digital" checked onchange="toggleClockMode(this.value)"> Digital</label>
+              <label><input type="radio" name="clockMode" value="analog" onchange="toggleClockMode(this.value)"> Analog</label>
+            </div>
+      
+            <div class="clock-display" id="liveClock"></div>
+      
+            <div class="analog-clock" id="analogClock">
+              <div class="hand hour" id="hourHand"></div>
+              <div class="hand minute" id="minuteHand"></div>
+              <div class="hand second" id="secondHand"></div>
+              <div class="center-dot"></div>
+            </div>
+          </div>
+        </div>
+      
+  
+
+    <!-- TIMER Tab -->
+    <div class="tab-content" id="timer">
+      <div class="timer-display" id="timerDisplay">00:00:00</div>
+
+      <div class="timer-inputs">
+        <input type="number" id="hours" placeholder="HH" min="0" />
+        <input type="number" id="minutes" placeholder="MM" min="0" />
+        <input type="number" id="seconds" placeholder="SS" min="0" />
+      </div>
+
+      <div class="timer-buttons">
+        <button onclick="startTimer()">Start</button>
+        <button onclick="resetTimer()">Reset</button>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- JS Script -->
+  <script src="js/timer-app.js"></script>
+</body>
+</html>
